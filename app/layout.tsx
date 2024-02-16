@@ -1,3 +1,4 @@
+import { CartContextProvider } from "./Context/CartContext";
 import Footer from "./Footer";
 import Header from "./Header";
 import "./global.css";
@@ -14,9 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <CartContextProvider>
           <Header />
           {children}
           <Footer />
+        </CartContextProvider>
       </body>
     </html>
   );
